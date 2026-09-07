@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%" fill="none">
+  <defs>
+    <radialGradient id="vehGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.3" />
+      <stop offset="60%" stop-color="#8b5cf6" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#030712" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="380" rx="14" fill="#060913" stroke="#1e293b" stroke-width="1.2" />
+  <circle cx="300" cy="190" r="160" fill="url(#vehGlow)" />
+
+  <!-- Security Access Gate & System Interface -->
+  <!-- Left Side: Digital Campus Vehicle Pass Card Mockup -->
+  <g transform="translate(45, 45)">
+    <rect width="240" height="150" rx="12" fill="url(#cardGrad)" stroke="#ec4899" stroke-opacity="0.6" stroke-width="1.5" />
+    
+    <!-- Header of ID Pass -->
+    <rect width="240" height="28" rx="12" fill="#831843" />
+    <circle cx="20" cy="14" r="5" fill="#f472b6" />
+    <text x="32" y="18" fill="#fdf2f8" font-family="'Inter', sans-serif" font-size="8.5" font-weight="bold">PASE VEHICULAR OFICIAL • UNEFA</text>
+
+    <!-- User Photo Placeholder -->
+    <rect x="14" y="38" width="45" height="50" rx="4" fill="#1e293b" stroke="#475569" stroke-width="0.8" />
+    <circle cx="36" cy="55" r="10" fill="#64748b" />
+    <path d="M22,78 C22,68 50,68 50,78" fill="#64748b" />
+
+    <!-- Personal & Vehicle Details -->
+    <text x="68" y="48" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="9" font-weight="bold">Ing. Carlos Mendoza</text>
+    <text x="68" y="60" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="7.5">C.I: V-18.492.019 • Personal Docente</text>
+    <text x="68" y="74" fill="#f472b6" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold">PLACA: AB849CD</text>
+    <text x="68" y="85" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="7">Toyota Corolla • Gris Plomo</text>
+
+    <!-- QR Code Scan Area -->
+    <rect x="175" y="38" width="50" height="50" rx="4" fill="#ffffff" />
+    <!-- QR pattern simulation -->
+    <rect x="180" y="43" width="16" height="16" fill="#000000" />
+    <rect x="183" y="46" width="10" height="10" fill="#ffffff" />
+    <rect x="186" y="49" width="4" height="4" fill="#000000" />
+    <rect x="203" y="43" width="16" height="16" fill="#000000" />
+    <rect x="206" y="46" width="10" height="10" fill="#ffffff" />
+    <rect x="209" y="49" width="4" height="4" fill="#000000" />
+    <rect x="180" y="66" width="16" height="16" fill="#000000" />
+    <rect x="183" y="69" width="10" height="10" fill="#ffffff" />
+    <rect x="186" y="72" width="4" height="4" fill="#000000" />
+    <rect x="204" y="68" width="6" height="6" fill="#000000" />
+    <rect x="213" y="75" width="6" height="6" fill="#000000" />
+
+    <!-- Status Bar inside Card -->
+    <rect x="14" y="98" width="212" height="20" rx="4" fill="#042f2e" stroke="#10b981" stroke-width="0.8" />
+    <circle cx="26" cy="108" r="3" fill="#34d399" />
+    <text x="36" y="112" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="bold">AUTORIZADO • VERIFICACIÓN ACTIVA</text>
+    <text x="185" y="112" fill="#6ee7b7" font-family="'JetBrains Mono', monospace" font-size="7">3/3 OK</text>
+  </g>
+
+  <!-- Right Side: System Screen Modules -->
+  <g transform="translate(310, 45)">
+    <rect width="245" height="230" rx="12" fill="#090e1a" stroke="#334155" stroke-width="1.5" />
+    
+    <!-- System Navbar -->
+    <rect width="245" height="28" rx="12" fill="#0f172a" />
+    <text x="14" y="18" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="8.5" font-weight="bold">SISTEMA CONTROL DE ACCESO</text>
+    
+    <!-- 4 Module Badges in Dashboard -->
+    <g transform="translate(14, 38)">
+      <rect width="102" height="40" rx="6" fill="#1e293b" stroke="#ec4899" stroke-opacity="0.4" stroke-width="1" />
+      <text x="10" y="16" fill="#f472b6" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="bold">1. PERSONAS</text>
+      <text x="10" y="29" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="7">Cédula, Foto y Carnet</text>
+    </g>
+
+    <g transform="translate(126, 38)">
+      <rect width="105" height="40" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1" />
+      <text x="10" y="16" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="bold">2. VEHÍCULOS</text>
+      <text x="10" y="29" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="7">Placa, Marca y Modelo</text>
+    </g>
+
+    <g transform="translate(14, 86)">
+      <rect width="102" height="40" rx="6" fill="#1e293b" stroke="#10b981" stroke-opacity="0.4" stroke-width="1" />
+      <text x="10" y="16" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="bold">3. VERIFICACIÓN</text>
+      <text x="10" y="29" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="7">Historial hasta 3 pasos</text>
+    </g>
+
+    <g transform="translate(126, 86)">
+      <rect width="105" height="40" rx="6" fill="#1e293b" stroke="#a855f7" stroke-opacity="0.4" stroke-width="1" />
+      <text x="10" y="16" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="bold">4. SEGURIDAD</text>
+      <text x="10" y="29" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="7">Permisos y Roles</text>
+    </g>
+
+    <!-- Verification Audit List Inside Screen -->
+    <g transform="translate(14, 136)">
+      <rect width="217" height="80" rx="6" fill="#030712" stroke="#1e293b" />
+      <text x="10" y="16" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="7">REGISTRO DE ENTRADAS RECIENTES</text>
+      
+      <text x="10" y="32" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="7.5">08:14 • AB849CD • Carlos Mendoza</text>
+      <text x="180" y="32" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="7">OK ✓</text>
+
+      <text x="10" y="48" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="7.5">08:21 • XY102ZT • Personal DACE</text>
+      <text x="180" y="48" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="7">OK ✓</text>
+
+      <text x="10" y="64" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="7.5">08:35 • MN991AA • Visitante Externo</text>
+      <text x="175" y="64" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="7">PASE 1</text>
+    </g>
+  </g>
+
+  <!-- Bottom Strip: Institutional Security Feature -->
+  <g transform="translate(45, 215)">
+    <rect width="240" height="60" rx="8" fill="#090e1a" stroke="#1e293b" />
+    <text x="14" y="24" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="9" font-weight="bold">Emisión Automática de Carnet</text>
+    <text x="14" y="40" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="8">Envío instantáneo en formato PDF al correo</text>
+  </g>
+
+  <g transform="translate(160, 325)">
+    <rect width="280" height="28" rx="14" fill="#090e1a" stroke="#ec4899" stroke-opacity="0.4" stroke-width="1" />
+    <text x="140" y="18" fill="#fbcfe8" font-family="'JetBrains Mono', monospace" font-size="8.5" text-anchor="middle">CONTROL DE ACCESO Y SEGURIDAD UNIVERSITARIA</text>
+  </g>
+</svg>

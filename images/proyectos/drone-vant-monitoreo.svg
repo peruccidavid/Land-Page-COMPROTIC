@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%" fill="none">
+  <defs>
+    <radialGradient id="droneGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.35" />
+      <stop offset="60%" stop-color="#0284c7" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#030712" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="bladeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2dd4bf" />
+      <stop offset="100%" stop-color="#0d9488" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="380" rx="14" fill="#060913" stroke="#1e293b" stroke-width="1.2" />
+  <circle cx="300" cy="180" r="160" fill="url(#droneGlow)" />
+
+  <!-- Radar Grid & Telemetry HUD Overlay -->
+  <g stroke="#1e293b" stroke-width="0.75" stroke-dasharray="2 4">
+    <circle cx="300" cy="180" r="130" />
+    <circle cx="300" cy="180" r="80" />
+    <line x1="140" y1="180" x2="460" y2="180" />
+    <line x1="300" y1="50" x2="300" y2="310" />
+  </g>
+
+  <!-- Quadcopter Drone Model Architecture -->
+  <g transform="translate(300, 180)">
+    <!-- 4 Diagonal Carbon Fiber Arms -->
+    <line x1="-80" y1="-80" x2="80" y2="80" stroke="#334155" stroke-width="8" stroke-linecap="round" />
+    <line x1="-80" y1="-80" x2="80" y2="80" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" />
+
+    <line x1="-80" y1="80" x2="80" y2="-80" stroke="#334155" stroke-width="8" stroke-linecap="round" />
+    <line x1="-80" y1="80" x2="80" y2="-80" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" />
+
+    <!-- 4 Rotors & Spinning Propellers -->
+    <!-- Rotor Top-Left -->
+    <circle cx="-80" cy="-80" r="12" fill="#090e1a" stroke="#2dd4bf" stroke-width="2" />
+    <ellipse cx="-80" cy="-80" rx="35" ry="8" stroke="#2dd4bf" stroke-opacity="0.5" stroke-width="1.5" transform="rotate(-30 -80 -80)" />
+    <ellipse cx="-80" cy="-80" rx="8" ry="35" stroke="#2dd4bf" stroke-opacity="0.3" stroke-width="1" transform="rotate(-30 -80 -80)" />
+
+    <!-- Rotor Top-Right -->
+    <circle cx="80" cy="-80" r="12" fill="#090e1a" stroke="#2dd4bf" stroke-width="2" />
+    <ellipse cx="80" cy="-80" rx="35" ry="8" stroke="#2dd4bf" stroke-opacity="0.5" stroke-width="1.5" transform="rotate(30 80 -80)" />
+    <ellipse cx="80" cy="-80" rx="8" ry="35" stroke="#2dd4bf" stroke-opacity="0.3" stroke-width="1" transform="rotate(30 80 -80)" />
+
+    <!-- Rotor Bottom-Left -->
+    <circle cx="-80" cy="80" r="12" fill="#090e1a" stroke="#2dd4bf" stroke-width="2" />
+    <ellipse cx="-80" cy="80" rx="35" ry="8" stroke="#2dd4bf" stroke-opacity="0.5" stroke-width="1.5" transform="rotate(30 -80 80)" />
+    <ellipse cx="-80" cy="80" rx="8" ry="35" stroke="#2dd4bf" stroke-opacity="0.3" stroke-width="1" transform="rotate(30 -80 80)" />
+
+    <!-- Rotor Bottom-Right -->
+    <circle cx="80" cy="80" r="12" fill="#090e1a" stroke="#2dd4bf" stroke-width="2" />
+    <ellipse cx="80" cy="80" rx="35" ry="8" stroke="#2dd4bf" stroke-opacity="0.5" stroke-width="1.5" transform="rotate(-30 80 80)" />
+    <ellipse cx="80" cy="80" rx="8" ry="35" stroke="#2dd4bf" stroke-opacity="0.3" stroke-width="1" transform="rotate(-30 80 80)" />
+
+    <!-- Central Fuselage Body -->
+    <polygon points="0,-35 32,-15 32,15 0,35 -32,15 -32,-15" fill="#0b1329" stroke="#38bdf8" stroke-width="2.5" />
+    <circle cx="0" cy="0" r="16" fill="#042f2e" stroke="#2dd4bf" stroke-width="1.5" />
+    <!-- Autopilot Gyro Chip -->
+    <rect x="-6" y="-6" width="12" height="12" rx="2" fill="#14b8a6" />
+    <!-- Front Gimbal Camera View -->
+    <circle cx="0" cy="-28" r="5" fill="#ef4444" />
+    <circle cx="0" cy="-28" r="8" stroke="#ef4444" stroke-width="1" opacity="0.6" />
+  </g>
+
+  <!-- Flight HUD Telemetry Widgets -->
+  <!-- Top Left: GPS & Altitude -->
+  <g transform="translate(35, 35)">
+    <rect width="130" height="48" rx="8" fill="#090e1a" stroke="#1e293b" />
+    <text x="12" y="20" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="8">ALTITUD / MODO</text>
+    <text x="12" y="36" fill="#2dd4bf" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">120m • AUTO-GPS</text>
+  </g>
+
+  <!-- Top Right: Battery & Telemetry -->
+  <g transform="translate(435, 35)">
+    <rect width="130" height="48" rx="8" fill="#090e1a" stroke="#1e293b" />
+    <text x="12" y="20" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="8">BATERÍA LiPo</text>
+    <text x="12" y="36" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">92% • 28 MIN</text>
+  </g>
+
+  <!-- Bottom: Authors Recognition Plaque -->
+  <g transform="translate(100, 315)">
+    <rect width="400" height="40" rx="10" fill="#090e1a" stroke="#14b8a6" stroke-opacity="0.4" stroke-width="1" />
+    <text x="200" y="18" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="9" font-weight="bold" text-anchor="middle">EQUIPO DE DESARROLLO &amp; AUTORES:</text>
+    <text x="200" y="31" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="8" text-anchor="middle">Jessika Rodríguez • Abraham Rodríguez • Ernesto Mejias • Adrian Aguilera</text>
+  </g>
+</svg>

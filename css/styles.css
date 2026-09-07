@@ -1,27 +1,37 @@
 /* ============================================================
-   COMPROTIC · ESTILOS PERSONALIZADOS
-   Dark mode corporativo tecnológico · UNEFA VIDI
+   COMPROTIC · ESTILOS CORPORATIVOS TECNOLÓGICOS E INSTITUCIONALES
+   UNEFA VIDI · Soberanía e Innovación Tecnológica
+   Paleta: Blanco #f2f2f2, Azules #0085bf / #004c9e, Gris #333333
    ============================================================ */
 
-/* ---------- Variables globales ---------- */
+/* ---------- Variables de Diseño Institucional ---------- */
 :root {
-  --carbon-950: #05070a;
-  --carbon-900: #0a0e14;
-  --carbon-850: #0d1219;
-  --carbon-800: #111822;
-  --carbon-700: #1a2330;
-  --carbon-600: #243042;
-  --green-300: #4ade80;
-  --green-400: #22c55e;
-  --green-500: #16a34a;
-  --green-600: #15803d;
-  --cyan-400: #22d3ee;
-  --cyan-500: #06b6d4;
-  --transition-fast: 0.3s;
-  --transition-med: 0.5s;
+  --white-main: #f2f2f2;
+  --white-soft: #e5e9f0;
+  --blue-primary: #0085bf;
+  --blue-deep: #004c9e;
+  --blue-hover: #009de0;
+  --blue-glow: rgba(0, 133, 191, 0.4);
+  --blue-surface: rgba(0, 133, 191, 0.08);
+  --gray-charcoal: #333333;
+  --gray-border: #232d3d;
+  --gray-muted: #8b9bb4;
+
+  /* Superficies oscuras tecnológicas de alto contraste */
+  --bg-primary: #070b12;
+  --bg-surface-1: #0c121e;
+  --bg-surface-2: #111a2b;
+  --bg-surface-3: #18243b;
+
+  --transition-fast: 0.25s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
   --font-display: "Space Grotesk", sans-serif;
   --font-body: "Inter", sans-serif;
-  --font-tech: "Share Tech Mono", monospace;
+  --font-tech: "Inter", sans-serif;
+
+  /* Colores especiales */
+  --cunaguaro-color: #b88b45;
 }
 
 /* ---------- Reset y base ---------- */
@@ -33,41 +43,41 @@
 
 body {
   font-family: var(--font-body);
-  background-color: var(--carbon-950);
-  color: #d1d5db;
+  background-color: var(--bg-primary);
+  color: #cfd8e3;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background-color: rgba(34, 197, 94, 0.3);
-  color: #ffffff;
+  background-color: rgba(0, 133, 191, 0.35);
+  color: var(--white-main);
 }
 
-/* ---------- Scrollbar ---------- */
+/* ---------- Scrollbar Institucional ---------- */
 ::-webkit-scrollbar {
-  width: 9px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--carbon-950);
+  background: var(--bg-primary);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--green-500), var(--cyan-500));
-  border-radius: 10px;
+  background: linear-gradient(180deg, var(--blue-primary), var(--blue-deep));
+  border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, var(--green-400), var(--cyan-400));
+  background: linear-gradient(180deg, var(--blue-hover), var(--blue-primary));
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* ---------- Tipografías utilitarias ---------- */
+/* ---------- Tipografías ---------- */
 .font-display {
   font-family: var(--font-display);
 }
@@ -76,81 +86,94 @@ html {
   font-family: var(--font-body);
 }
 
-.tech-font {
-  font-family: var(--font-tech);
+.font-institutional {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
 }
 
-/* ---------- Textos degradados ---------- */
-.text-gradient-green {
-  background: linear-gradient(135deg, #4ade80 0%, #22c55e 50%, #16a34a 100%);
+/* ---------- Gradientes de Texto ---------- */
+.text-gradient-blue {
+  background: linear-gradient(135deg, #38bdf8 0%, #0085bf 50%, #004c9e 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
 
-.text-gradient-cyan {
-  background: linear-gradient(135deg, #22d3ee 0%, #06b6d4 50%, #0891b2 100%);
+.text-gradient-white {
+  background: linear-gradient(180deg, #ffffff 0%, #d8e2ef 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
 
-.text-gradient {
-  background: linear-gradient(90deg, #4ade80, #22d3ee);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-/* ---------- Retícula hero (grid) ---------- */
+/* ---------- Retícula de Fondo Institucional ---------- */
 .hero-grid {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(34, 197, 94, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(34, 197, 94, 0.06) 1px, transparent 1px);
-  background-size: 60px 60px;
-  animation: gridMove 20s linear infinite;
-  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+    linear-gradient(rgba(0, 133, 191, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 133, 191, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(ellipse 75% 75% at 50% 50%, black 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 75% 75% at 50% 50%, black 30%, transparent 100%);
   pointer-events: none;
 }
 
-@keyframes gridMove {
-  0% { background-position: 0 0; }
-  100% { background-position: 0 60px; }
-}
-
-/* ---------- Botones con brillo ---------- */
-.btn-glow {
+/* ---------- Botones con Brillo y Estilo Institucional ---------- */
+.btn-primary {
+  background: linear-gradient(135deg, #0085bf 0%, #004c9e 100%);
+  color: #ffffff;
+  font-weight: 600;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 20px -5px rgba(34, 197, 94, 0.5);
+  box-shadow: 0 4px 20px -2px rgba(0, 133, 191, 0.45);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
 }
 
-.btn-glow::after {
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px 0 rgba(0, 133, 191, 0.6);
+  background: linear-gradient(135deg, #009de0 0%, #005bbd 100%);
+}
+
+.btn-primary::after {
   content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
   transform: skewX(-25deg);
   transition: left 0.6s ease;
 }
 
-.btn-glow:hover::after {
+.btn-primary:hover::after {
   left: 125%;
 }
 
-/* ---------- Efecto reveal al hacer scroll ---------- */
+.btn-secondary {
+  border: 1px solid rgba(0, 133, 191, 0.4);
+  background: rgba(0, 133, 191, 0.08);
+  color: var(--white-main);
+  backdrop-blur: 8px;
+  transition: all var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  border-color: #0085bf;
+  background: rgba(0, 133, 191, 0.18);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ---------- Efecto Reveal al Scroll ---------- */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
@@ -159,91 +182,143 @@ html {
   transform: translateY(0);
 }
 
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-1 {
+  transition-delay: 0.1s;
+}
 
-/* ---------- Tarjetas de unidades ---------- */
+.reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.3s;
+}
+
+.reveal-delay-4 {
+  transition-delay: 0.4s;
+}
+
+/* ---------- Tarjetas de Unidades Estratégicas (Rediseño) ---------- */
 .unit-card {
-  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
-}
-
-.unit-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px -20px rgba(34, 197, 94, 0.25);
-}
-
-/* ---------- Tarjetas de servicios ---------- */
-.service-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.service-card:hover {
-  box-shadow: 0 20px 50px -20px rgba(34, 211, 238, 0.2);
-}
-
-/* ---------- Tarjetas IA ---------- */
-.ai-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.ai-card:hover {
-  box-shadow: 0 20px 50px -20px rgba(34, 197, 94, 0.25);
-}
-
-.ai-btn {
+  background: linear-gradient(180deg, rgba(17, 26, 43, 0.85) 0%, rgba(12, 18, 30, 0.95) 100%);
+  border: 1px solid rgba(0, 133, 191, 0.22);
+  border-radius: 1.25rem;
+  transition: transform var(--transition-smooth), border-color var(--transition-fast), box-shadow var(--transition-smooth);
   position: relative;
   overflow: hidden;
 }
 
-.ai-btn::after {
+.unit-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 133, 191, 0.65);
+  box-shadow: 0 20px 40px -15px rgba(0, 133, 191, 0.25);
+}
+
+.unit-card::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -100%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
-  transform: skewX(-25deg);
-  transition: left 0.5s ease;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #0085bf, transparent);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
 }
 
-.ai-btn:hover::after {
-  left: 125%;
+.unit-card:hover::before {
+  opacity: 1;
 }
 
-/* ---------- Tarjetas legales ---------- */
-.legal-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+/* ---------- Canvas 3D Hero Container ---------- */
+#hero3DContainer {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
 }
 
-.legal-card:hover {
-  box-shadow: 0 15px 40px -15px rgba(34, 197, 94, 0.2);
+#hero3DCanvas {
+  width: 100% !important;
+  height: 100% !important;
+  outline: none;
 }
 
-/* ---------- Campos de formulario ---------- */
+.hero-3d-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(12, 18, 30, 0.85);
+  border: 1px solid rgba(0, 133, 191, 0.35);
+  backdrop-filter: blur(10px);
+  border-radius: 9999px;
+  padding: 6px 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: var(--white-main);
+  letter-spacing: 0.05em;
+  pointer-events: none;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- Tarjetas de Servicios Institucionales ---------- */
+.service-card {
+  background: rgba(17, 26, 43, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 1rem;
+  padding: 1.75rem;
+  transition: all var(--transition-fast);
+}
+
+.service-card:hover {
+  background: rgba(17, 26, 43, 0.95);
+  border-color: rgba(0, 133, 191, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 35px -10px rgba(0, 133, 191, 0.2);
+}
+
+/* ---------- Tarjetas IA & Asistentes ---------- */
+.ai-card {
+  background: linear-gradient(180deg, rgba(17, 26, 43, 0.75) 0%, rgba(12, 18, 30, 0.85) 100%);
+  border: 1px solid rgba(0, 133, 191, 0.2);
+  border-radius: 1.25rem;
+  transition: all var(--transition-fast);
+}
+
+.ai-card:hover {
+  border-color: #0085bf;
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -15px rgba(0, 133, 191, 0.3);
+}
+
+/* ---------- Campos de Formulario ---------- */
 .input-field {
   width: 100%;
-  padding: 0.85rem 1rem;
-  background-color: var(--carbon-800);
-  border: 1px solid var(--carbon-700);
+  padding: 0.85rem 1.1rem;
+  background-color: var(--bg-surface-2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0.5rem;
-  color: #e5e7eb;
+  color: var(--white-main);
   font-size: 0.875rem;
   font-family: var(--font-body);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: all var(--transition-fast);
 }
 
 .input-field::placeholder {
-  color: #4b5563;
+  color: #627289;
 }
 
 .input-field:focus {
   outline: none;
-  border-color: var(--green-400);
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
-  background-color: var(--carbon-850);
+  border-color: #0085bf;
+  box-shadow: 0 0 0 3px rgba(0, 133, 191, 0.2);
+  background-color: var(--bg-surface-3);
 }
 
 .input-field.input-error {
@@ -253,25 +328,20 @@ html {
 
 select.input-field {
   cursor: pointer;
-  color: #a1a1aa;
-}
-
-select.input-field:valid {
-  color: #e5e7eb;
 }
 
 select.input-field option {
-  background-color: var(--carbon-900);
-  color: #e5e7eb;
+  background-color: var(--bg-surface-1);
+  color: var(--white-main);
   padding: 0.5rem;
 }
 
-/* ---------- Modal ---------- */
+/* ---------- Modal Simón ---------- */
 .modal {
   display: flex;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--transition-fast);
 }
 
 .modal.modal-open {
@@ -283,56 +353,167 @@ select.input-field option {
   cursor: pointer;
 }
 
-/* ---------- Mensajes de estado del formulario ---------- */
+/* ---------- Notificaciones Formulario ---------- */
 .form-success {
-  background-color: rgba(34, 197, 94, 0.12);
-  border: 1px solid rgba(34, 197, 94, 0.45);
-  color: #4ade80;
+  background-color: rgba(0, 133, 191, 0.15);
+  border: 1px solid rgba(0, 133, 191, 0.5);
+  color: #38bdf8;
 }
 
 .form-error {
-  background-color: rgba(239, 68, 68, 0.12);
-  border: 1px solid rgba(239, 68, 68, 0.45);
-  color: #f87171;
+  background-color: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  color: #fca5a5;
 }
 
-/* ---------- Barra de progreso de scroll ---------- */
+/* ---------- Barra de Progreso de Scroll ---------- */
 #scrollProgress {
   position: fixed;
   top: 0;
   left: 0;
   width: 0%;
   height: 3px;
-  background: linear-gradient(90deg, #22c55e, #22d3ee);
+  background: linear-gradient(90deg, #004c9e, #0085bf, #38bdf8);
   z-index: 1000;
   transition: width 0.1s linear;
-  box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+  box-shadow: 0 0 10px rgba(0, 133, 191, 0.6);
 }
 
-/* ---------- Navbar efecto scroll ---------- */
+/* ---------- Navbar Scrolled ---------- */
 .navbar-scrolled {
-  background-color: rgba(5, 7, 10, 0.95) !important;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+  background-color: rgba(7, 11, 18, 0.95) !important;
+  border-color: rgba(0, 133, 191, 0.2) !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8);
 }
 
-/* ---------- Botón flotante ---------- */
-@keyframes float {
+/* ---------- Botón Flotante de Atención ---------- */
+.floating-contact-btn {
+  background: linear-gradient(135deg, #0085bf, #004c9e);
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(0, 76, 158, 0.45);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.floating-contact-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 30px rgba(0, 133, 191, 0.6);
+}
+
+/* ---------- Banner Proyecto Cunaguaro Parallax ---------- */
+#bannerCunaguaro {
+  background-color: #070b12;
+  contain: paint;
+}
+
+.parallax-bg-wrapper {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+#parallaxCunaguaroImg {
+  transform-origin: center center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+}
+
+.cunaguaro-label {
+  color: var(--cunaguaro-color);
+}
+
+/* ---------- Escenario Dinámico de Unefito & Nodos Flotantes ---------- */
+.unefito-hub-container {
+  position: relative;
+  background: radial-gradient(circle at center, rgba(0, 133, 191, 0.12) 0%, rgba(7, 11, 18, 0.95) 75%);
+}
+
+.unefito-avatar {
+  animation: unefitoFloat 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 25px rgba(0, 133, 191, 0.55));
+}
+
+@keyframes unefitoFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1.5deg);
+  }
+}
+
+.unefito-core-ring {
+  animation: pulseRing 3.5s ease-in-out infinite;
+}
+
+.unefito-core-ring-2 {
+  animation: pulseRing 5s ease-in-out infinite reverse;
+}
+
+@keyframes pulseRing {
+  0%, 100% {
+    transform: scale(0.96);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 0.85;
+  }
+}
+
+.data-stream-line {
+  stroke-dasharray: 6 6;
+  animation: dataStream 1.8s linear infinite;
+}
+
+.data-stream-line-reverse {
+  stroke-dasharray: 6 6;
+  animation: dataStream 2.2s linear infinite reverse;
+}
+
+@keyframes dataStream {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+.node-float-1 {
+  animation: nodeFloat1 5s ease-in-out infinite;
+}
+
+.node-float-2 {
+  animation: nodeFloat2 6s ease-in-out infinite 0.7s;
+}
+
+.node-float-3 {
+  animation: nodeFloat3 5.5s ease-in-out infinite 1.2s;
+}
+
+.node-float-4 {
+  animation: nodeFloat4 6.2s ease-in-out infinite 1.8s;
+}
+
+@keyframes nodeFloat1 {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
+  50% { transform: translateY(-3px); }
 }
 
-/* ---------- Animación scan hero ---------- */
-@keyframes scan {
-  0% { top: -10%; }
-  100% { top: 110%; }
+@keyframes nodeFloat2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
 }
 
-.animate-scan {
-  animation: scan 3s linear infinite;
+@keyframes nodeFloat3 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
 }
 
-/* ---------- Preferencias de accesibilidad: reducir movimiento ---------- */
+@keyframes nodeFloat4 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+/* ---------- Reducir Movimiento ---------- */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -346,16 +527,4 @@ select.input-field option {
     opacity: 1;
     transform: none;
   }
-}
-
-/* ---------- Responsive ajustes ---------- */
-@media (max-width: 640px) {
-  .reveal {
-    transform: translateY(25px);
-  }
-}
-
-/* Prevenir scroll cuando el modal está abierto */
-body.modal-open {
-  overflow: hidden;
 }

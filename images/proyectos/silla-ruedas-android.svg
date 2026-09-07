@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%" fill="none">
+  <defs>
+    <radialGradient id="chairGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.3" />
+      <stop offset="60%" stop-color="#0284c7" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#030712" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="androidGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="380" rx="14" fill="#060913" stroke="#1e293b" stroke-width="1.2" />
+  <circle cx="380" cy="180" r="160" fill="url(#chairGlow)" />
+
+  <!-- Technical Schematic Grid Lines -->
+  <g stroke="#1e293b" stroke-width="0.75" stroke-dasharray="3 4">
+    <line x1="50" y1="190" x2="550" y2="190" />
+    <line x1="280" y1="40" x2="280" y2="340" />
+  </g>
+
+  <!-- Left: Android Smartphone App Controller -->
+  <g transform="translate(60, 40)">
+    <rect width="170" height="295" rx="20" fill="#090e1a" stroke="#334155" stroke-width="2.5" />
+    <rect x="8" y="12" width="154" height="271" rx="14" fill="#030712" />
+    <rect x="60" y="18" width="50" height="4" rx="2" fill="#1e293b" />
+    
+    <!-- App UI -->
+    <rect x="14" y="28" width="142" height="26" rx="6" fill="#064e3b" />
+    <circle cx="26" cy="41" r="5" fill="#34d399" />
+    <text x="36" y="44" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="9" font-weight="700">COMPROTIC MOBILITY</text>
+
+    <!-- Virtual Joystick -->
+    <circle cx="85" cy="115" r="45" fill="#091122" stroke="#10b981" stroke-opacity="0.4" stroke-width="1.5" />
+    <circle cx="85" cy="115" r="30" stroke="#334155" stroke-dasharray="2 2" />
+    <circle cx="85" cy="105" r="14" fill="url(#androidGrad)" filter="drop-shadow(0 0 8px rgba(16,185,129,0.5))" />
+    <text x="85" y="145" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="7" text-anchor="middle">JOYSTICK CONTROL</text>
+
+    <!-- Telemetry Badges inside App -->
+    <g transform="translate(14, 168)">
+      <rect width="68" height="34" rx="6" fill="#090e1a" stroke="#1e293b" />
+      <text x="8" y="13" fill="#64748b" font-family="'Inter', sans-serif" font-size="7">OBSTÁCULO</text>
+      <text x="8" y="28" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold">LIBRE 2.4m</text>
+    </g>
+
+    <g transform="translate(88, 168)">
+      <rect width="68" height="34" rx="6" fill="#090e1a" stroke="#1e293b" />
+      <text x="8" y="13" fill="#64748b" font-family="'Inter', sans-serif" font-size="7">GPS STATUS</text>
+      <text x="8" y="28" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold">FIJADO 9 sat</text>
+    </g>
+
+    <!-- Auto-Dock Button -->
+    <rect x="14" y="212" width="142" height="26" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="0.8" />
+    <text x="85" y="228" fill="#34d399" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600" text-anchor="middle">⚡ Acercamiento a Cama</text>
+
+    <rect x="14" y="244" width="142" height="24" rx="6" fill="#0f172a" />
+    <text x="85" y="259" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="8" text-anchor="middle">Parada de Emergencia</text>
+  </g>
+
+  <!-- Bluetooth / Wireless link arrow -->
+  <path d="M245,150 L295,150" stroke="#10b981" stroke-width="2" stroke-dasharray="4 3" />
+  <polygon points="295,146 303,150 295,154" fill="#10b981" />
+  <text x="270" y="140" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">BT / WIFI</text>
+
+  <!-- Right: Smart Wheelchair Schematic -->
+  <g transform="translate(320, 60)">
+    <!-- Sensor radar arcs -->
+    <path d="M190,120 A50,50 0 0,0 190,60" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.6" stroke-dasharray="4 4" fill="none" />
+    <path d="M205,130 A70,70 0 0,0 205,50" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="6 6" fill="none" />
+    <circle cx="170" cy="90" r="6" fill="#38bdf8" />
+    <text x="215" y="94" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="8">CÁMARA &amp; RADAR</text>
+
+    <!-- Wheelchair Frame -->
+    <!-- Big back wheel -->
+    <circle cx="80" cy="170" r="42" stroke="#64748b" stroke-width="4" fill="#090e1a" />
+    <circle cx="80" cy="170" r="28" stroke="#10b981" stroke-width="1.5" stroke-dasharray="4 4" />
+    <circle cx="80" cy="170" r="8" fill="#10b981" />
+    <!-- Spokes -->
+    <line x1="80" y1="128" x2="80" y2="212" stroke="#475569" stroke-width="1.5" />
+    <line x1="38" y1="170" x2="122" y2="170" stroke="#475569" stroke-width="1.5" />
+
+    <!-- Small front wheel -->
+    <circle cx="160" cy="190" r="16" stroke="#64748b" stroke-width="3" fill="#090e1a" />
+    <circle cx="160" cy="190" r="4" fill="#38bdf8" />
+
+    <!-- Seat & Chassis Tube -->
+    <path d="M50,70 L50,140 L150,140 L160,190" stroke="#06b6d4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <path d="M50,140 L80,170" stroke="#06b6d4" stroke-width="4" fill="none" />
+    <!-- Armrest -->
+    <path d="M40,105 L110,105" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round" fill="none" />
+    <!-- Footrest -->
+    <path d="M150,140 L165,160 L185,160" stroke="#06b6d4" stroke-width="3" stroke-linecap="round" fill="none" />
+    <!-- Battery / Motor pack under seat -->
+    <rect x="75" y="145" width="45" height="24" rx="4" fill="#042f2e" stroke="#10b981" stroke-width="1.2" />
+    <text x="97" y="160" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="bold" text-anchor="middle">MOTOR 24V</text>
+
+    <!-- GPS Antenna on top back -->
+    <line x1="45" y1="70" x2="45" y2="48" stroke="#cbd5e1" stroke-width="2" />
+    <circle cx="45" cy="46" r="4" fill="#10b981" />
+    <text x="55" y="48" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="8">MÓDULO GPS</text>
+  </g>
+
+  <!-- Bottom Spec Strip -->
+  <g transform="translate(180, 325)">
+    <rect width="250" height="32" rx="8" fill="#090e1a" stroke="#1e293b" />
+    <text x="125" y="20" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="9" text-anchor="middle">Autonomía Mejorada • Evasión Anticolisión</text>
+  </g>
+</svg>

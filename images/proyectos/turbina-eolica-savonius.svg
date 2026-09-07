@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%" fill="none">
+  <defs>
+    <radialGradient id="windGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.35" />
+      <stop offset="60%" stop-color="#10b981" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#030712" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="bladeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="380" rx="14" fill="#060913" stroke="#1e293b" stroke-width="1.2" />
+  <circle cx="280" cy="180" r="160" fill="url(#windGlow)" />
+
+  <!-- Wind Streamlines Airflow (Incoming from left) -->
+  <g stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" stroke-opacity="0.6">
+    <path d="M40,90 C100,90 140,80 180,95" />
+    <path d="M25,130 C95,130 135,140 185,135" />
+    <path d="M50,170 C110,170 140,165 190,170" />
+    <path d="M30,210 C90,210 130,225 180,215" />
+    <path d="M45,250 C105,250 145,245 185,250" />
+  </g>
+  <text x="60" y="70" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="bold">VIENTO INCIDENTE</text>
+
+  <!-- Savonius Vertical Wind Turbine Schematic -->
+  <g transform="translate(240, 40)">
+    <!-- Central Vertical Axis Shaft -->
+    <line x1="80" y1="20" x2="80" y2="220" stroke="#cbd5e1" stroke-width="5" stroke-linecap="round" />
+    
+    <!-- Top Support Disc / Bearing -->
+    <ellipse cx="80" cy="25" rx="55" ry="12" fill="#0f172a" stroke="#64748b" stroke-width="2" />
+    
+    <!-- Savonius Semicircular Blades (3D curvature effect) -->
+    <!-- Blade 1 (Left Concave) -->
+    <path d="M80,30 C30,30 20,80 30,120 C20,160 30,205 80,210" fill="#0369a1" fill-opacity="0.4" stroke="url(#bladeGrad)" stroke-width="3" />
+    <path d="M80,30 C45,45 35,90 45,120 C35,160 45,195 80,210" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3 3" fill="none" />
+
+    <!-- Blade 2 (Right Convex) -->
+    <path d="M80,30 C130,30 140,80 130,120 C140,160 130,205 80,210" fill="#047857" fill-opacity="0.4" stroke="url(#bladeGrad)" stroke-width="3" />
+    <path d="M80,30 C115,45 125,90 115,120 C125,160 115,195 80,210" stroke="#34d399" stroke-width="1.5" stroke-dasharray="3 3" fill="none" />
+
+    <!-- Middle Support Disc -->
+    <ellipse cx="80" cy="120" rx="55" ry="12" fill="#090e1a" stroke="#64748b" stroke-width="1.5" />
+
+    <!-- Bottom Support Disc -->
+    <ellipse cx="80" cy="210" rx="55" ry="12" fill="#0f172a" stroke="#64748b" stroke-width="2" />
+
+    <!-- Speed Multiplier Gearbox (Tren de Engranajes) -->
+    <rect x="60" y="222" width="40" height="28" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+    <circle cx="80" cy="236" r="8" fill="#090e1a" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2 2" />
+    <text x="80" y="240" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="6" text-anchor="middle">GEAR</text>
+
+    <!-- Electric Generator (Generador Eléctrico) -->
+    <rect x="52" y="252" width="56" height="34" rx="6" fill="#042f2e" stroke="#10b981" stroke-width="2" />
+    <text x="80" y="268" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="bold" text-anchor="middle">GENERADOR</text>
+    <text x="80" y="278" fill="#a7f3d0" font-family="'JetBrains Mono', monospace" font-size="6.5" text-anchor="middle">24V / 250W</text>
+
+    <!-- Base Mount Platform -->
+    <rect x="25" y="286" width="110" height="14" rx="3" fill="#0f172a" stroke="#475569" stroke-width="1.5" />
+
+    <!-- Rotation Arrows -->
+    <path d="M125,70 A30,15 0 0,1 40,70" stroke="#10b981" stroke-width="2" stroke-linecap="round" fill="none" />
+    <polygon points="38,66 32,73 40,76" fill="#10b981" />
+    <text x="80" y="60" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="7" text-anchor="middle">TORQUE ROTOR</text>
+  </g>
+
+  <!-- Right Technical Highlights Panel -->
+  <g transform="translate(420, 50)">
+    <rect width="145" height="235" rx="10" fill="#090e1a" stroke="#1e293b" />
+    <text x="14" y="22" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="bold">TURBINA SAVONIUS</text>
+    
+    <text x="14" y="44" fill="#64748b" font-family="'Inter', sans-serif" font-size="8">Tipo de Eje:</text>
+    <text x="14" y="56" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="8" font-weight="bold">Vertical (VAWT)</text>
+
+    <text x="14" y="78" fill="#64748b" font-family="'Inter', sans-serif" font-size="8">Fuerza de Impulso:</text>
+    <text x="14" y="90" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="8">Arrastre Aerodinámico</text>
+
+    <text x="14" y="112" fill="#64748b" font-family="'Inter', sans-serif" font-size="8">Palas:</text>
+    <text x="14" y="124" fill="#10b981" font-family="'Inter', sans-serif" font-size="8">Cóncavas / Convexas</text>
+
+    <text x="14" y="146" fill="#64748b" font-family="'Inter', sans-serif" font-size="8">Ventajas:</text>
+    <text x="14" y="158" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="7.5">• Energía 100% Limpia</text>
+    <text x="14" y="170" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="7.5">• Bajo Costo Material</text>
+    <text x="14" y="182" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="7.5">• No Requiere Orientación</text>
+
+    <rect x="10" y="196" width="125" height="26" rx="4" fill="#042f2e" stroke="#10b981" stroke-width="0.8" />
+    <text x="72" y="212" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="7.5" text-anchor="middle">SOBERANÍA ENERGÉTICA</text>
+  </g>
+
+  <!-- Bottom Title Strip -->
+  <g transform="translate(170, 325)">
+    <rect width="260" height="28" rx="14" fill="#090e1a" stroke="#0284c7" stroke-opacity="0.4" stroke-width="1" />
+    <text x="130" y="18" fill="#bae6fd" font-family="'JetBrains Mono', monospace" font-size="8.5" text-anchor="middle">ENERGÍA EÓLICA LIMPIA Y GENERACIÓN DISTRIBUIDA</text>
+  </g>
+</svg>
