@@ -517,7 +517,6 @@ function validateForm() {
   const fields = {
     nombre: document.getElementById('nombre'),
     email: document.getElementById('email'),
-    servicio: document.getElementById('servicio'),
     mensaje: document.getElementById('mensaje')
   };
 
@@ -534,13 +533,6 @@ function validateForm() {
     isValid = false;
   } else {
     setFieldError(fields.email, false);
-  }
-
-  if (fields.servicio && !fields.servicio.value) {
-    setFieldError(fields.servicio, true);
-    isValid = false;
-  } else {
-    setFieldError(fields.servicio, false);
   }
 
   if (fields.mensaje && fields.mensaje.value.trim().length < 10) {

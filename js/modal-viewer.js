@@ -73,7 +73,7 @@ const ProjectViewer = {
       categoryColor: "emerald",
       badge: "MOVILIDAD ASISTIDA",
       date: "2025",
-      image: "images/proyectos/silla-ruedas-android.svg",
+      image: "images/proyectos/silla-ruedas.jpg",
       authors: "Equipo de Robótica y Automatización COMPROTIC",
       summary: "Vehículo inteligente de asistencia a personas con movilidad reducida controlado vía app Android, con cámara y sensores anticolisión, y sistema GPS para traslados y acercamiento autónomo a la cama.",
       content: `
@@ -109,7 +109,7 @@ const ProjectViewer = {
       categoryColor: "amber",
       badge: "PROTOTIPADO DIGITAL",
       date: "2024 - 2025",
-      image: "images/proyectos/impresora-3d-prototipo.svg",
+      image: "images/proyectos/impresora-3d.jpg",
       authors: "Área de Fabricación Digital e Ingeniería Mecatrónica COMPROTIC",
       summary: "Prototipo de manufactura aditiva capaz de realizar réplicas tridimensionales a partir de bocetos y modelos vectoriales, con control de coordenadas mediante microcontrolador y extrusor térmico.",
       content: `
@@ -146,7 +146,7 @@ const ProjectViewer = {
       categoryColor: "blue",
       badge: "SISTEMA ALL-IN-ONE",
       date: "2025",
-      image: "images/proyectos/directorio-interactivo-chuao.svg",
+      image: "images/proyectos/directorio-digital-3d.jpg",
       authors: "Desarrollo Web y Sistemas Embebidos COMPROTIC UNEFA",
       summary: "Plataforma táctil All-in-One de bajo costo para la orientación e información espacial de visitantes en el edificio de la UNEFA Chuao, con planos interactivos por piso y búsqueda de dependencias.",
       content: `
@@ -181,8 +181,7 @@ const ProjectViewer = {
       categoryColor: "emerald",
       badge: "VANT SOBERANO",
       date: "2024 - 2025",
-      image: "images/proyectos/drone-vant-monitoreo.svg",
-      realPhoto: "images/proyectos/drone-vant-real.jpg",
+      image: "images/proyectos/drone.jpg",
       authors: "Jessika Rodríguez, Abraham Rodríguez, Ernesto Mejias y Adrian Aguilera",
       summary: "Vehículo aéreo no tripulado de bajo costo para tareas de monitoreo, observación y seguridad, con sistema de automatización de vuelos programables desarrollado por talento unefista.",
       content: `
@@ -257,7 +256,7 @@ const ProjectViewer = {
       categoryColor: "amber",
       badge: "ENERGÍA LIMPIA",
       date: "2024 - 2025",
-      image: "images/proyectos/turbina-eolica-savonius.svg",
+      image: "images/proyectos/turbina-eolica.jpg",
       authors: "Grupo de Investigación en Energías Renovables COMPROTIC",
       summary: "Diseño y construcción de un modelo funcional de turbina eólica de eje vertical tipo Savonius de bajo costo, para generación limpia y distribuida sin emisiones contaminantes.",
       content: `
@@ -333,28 +332,57 @@ const ProjectViewer = {
           </div>
         </div>
 
-        <!-- Visual Media Showcase inside Article -->
-        <div class="p-6 sm:p-8 border-b border-[#232d3d] bg-[#070b12] flex flex-col items-center justify-center">
-          <div class="w-full max-w-2xl rounded-2xl overflow-hidden border border-[#232d3d] bg-[#0c121e] shadow-2xl p-3">
-            <img 
-              src="${article.image}" 
-              alt="${article.title}" 
-              class="w-full h-auto max-h-[400px] object-contain rounded-xl"
-            />
+        <!-- Visual Media Showcase inside Article (Decorated & Zero Margin/Padding) -->
+        <div class="relative w-full overflow-hidden bg-[#070b12] border-b border-[#232d3d] p-0 m-0">
+          <!-- Cyber HUD Decorative Corner Brackets -->
+          <div class="pointer-events-none absolute top-4 left-4 z-10 w-7 h-7 border-t-2 border-l-2 border-[#38bdf8] shadow-[0_0_8px_rgba(56,189,248,0.6)]"></div>
+          <div class="pointer-events-none absolute top-4 right-4 z-10 w-7 h-7 border-t-2 border-r-2 border-[#38bdf8] shadow-[0_0_8px_rgba(56,189,248,0.6)]"></div>
+          <div class="pointer-events-none absolute bottom-4 left-4 z-10 w-7 h-7 border-b-2 border-l-2 border-[#38bdf8] shadow-[0_0_8px_rgba(56,189,248,0.6)]"></div>
+          <div class="pointer-events-none absolute bottom-4 right-4 z-10 w-7 h-7 border-b-2 border-r-2 border-[#38bdf8] shadow-[0_0_8px_rgba(56,189,248,0.6)]"></div>
+
+          <!-- Lateral HUD Reticle Crosshairs -->
+          <div class="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 z-10 w-3.5 h-[1.5px] bg-[#38bdf8]/70"></div>
+          <div class="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 z-10 w-3.5 h-[1.5px] bg-[#38bdf8]/70"></div>
+
+          <!-- Top-Left Glassmorphic HUD Badge -->
+          <div class="pointer-events-none absolute top-4 left-5 z-10 flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-[#070b12]/80 backdrop-blur-md border border-[#38bdf8]/40 shadow-lg">
+            <span class="w-2 h-2 rounded-full bg-[#38bdf8] animate-pulse"></span>
+            <span class="text-sm font-mono text-[#38bdf8] font-bold tracking-wider">COMPROTIC // I+D+i REGISTRO VISUAL</span>
           </div>
 
-          ${article.realPhoto ? `
-            <div class="mt-6 w-full max-w-2xl">
-              <div class="text-sm font-mono text-[#38bdf8] mb-2 flex items-center gap-1.5 font-semibold">
-                <span class="w-2 h-2 rounded-full bg-[#38bdf8] animate-ping"></span>
-                <span>REGISTRO FOTOGRÁFICO REAL EN LABORATORIO:</span>
-              </div>
-              <div class="rounded-xl overflow-hidden border border-[#0085bf]/40 shadow-xl">
-                <img src="${article.realPhoto}" alt="Foto real de laboratorio" class="w-full h-auto object-cover max-h-[350px]">
-              </div>
-            </div>
-          ` : ''}
+          <!-- Bottom-Right Project Identification Stamp -->
+          <div class="pointer-events-none absolute bottom-4 right-5 z-10 hidden sm:flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-[#070b12]/80 backdrop-blur-md border border-[#232d3d] shadow-lg text-sm font-mono text-gray-300">
+            <span class="text-[#38bdf8] font-bold">EXP:</span>
+            <span class="text-white">${article.id.toUpperCase()}</span>
+            <span class="text-[#38bdf8]">•</span>
+            <span class="text-gray-400">LAB-VIDI UNEFA</span>
+          </div>
+
+          <!-- Ambient Gradient Vignette -->
+          <div class="pointer-events-none absolute inset-0 z-[5] bg-gradient-to-t from-[#0c121e]/85 via-transparent to-[#070b12]/50"></div>
+
+          <!-- Full-Width Flush Image (Zero Padding / Zero Margin) -->
+          <img 
+            src="${article.image}" 
+            alt="${article.title}" 
+            class="w-full h-72 sm:h-96 md:h-[440px] ${article.image && article.image.toLowerCase().endsWith('.svg') ? 'object-contain p-6 bg-[#070b14]' : 'object-contain'} block m-0 p-0 transform hover:scale-[1.01] transition-transform duration-700 rounded-md"
+          />
+
+          <!-- Glowing Bottom Laser Accent Line -->
+          <div class="pointer-events-none absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#38bdf8] to-transparent z-10 shadow-[0_0_10px_rgba(56,189,248,0.8)]"></div>
         </div>
+
+        ${article.realPhoto ? `
+          <div class="p-6 w-full max-w-3xl mx-auto">
+            <div class="text-sm font-mono text-[#38bdf8] mb-2 flex items-center gap-1.5 font-semibold">
+              <span class="w-2 h-2 rounded-full bg-[#38bdf8] animate-ping"></span>
+              <span>REGISTRO FOTOGRÁFICO REAL EN LABORATORIO:</span>
+            </div>
+            <div class="rounded-xl overflow-hidden border border-[#0085bf]/40 shadow-xl">
+              <img src="${article.realPhoto}" alt="Foto real de laboratorio" class="w-full h-auto object-cover max-h-[350px]">
+            </div>
+          </div>
+        ` : ''}
 
         <!-- Article Prose Body -->
         <div class="p-6 sm:p-10 max-w-4xl mx-auto leading-relaxed text-gray-300 text-sm sm:text-base">

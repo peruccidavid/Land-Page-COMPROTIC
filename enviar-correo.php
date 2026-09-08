@@ -53,7 +53,6 @@ if (!empty($honeypot)) {
 $nombre      = isset($_POST['nombre']) ? trim(strip_tags($_POST['nombre'])) : '';
 $institucion = isset($_POST['institucion']) ? trim(strip_tags($_POST['institucion'])) : '';
 $email       = isset($_POST['email']) ? filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL) : '';
-$servicio    = isset($_POST['servicio']) ? trim(strip_tags($_POST['servicio'])) : '';
 $mensaje     = isset($_POST['mensaje']) ? trim(strip_tags($_POST['mensaje'])) : '';
 
 // -----------------------------------------------------------------------
@@ -67,10 +66,6 @@ if (mb_strlen($nombre, 'UTF-8') < 3) {
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $errores[] = 'El correo electrónico suministrado no posee un formato válido.';
-}
-
-if (empty($servicio)) {
-    $errores[] = 'Debe seleccionar una unidad o servicio requerido.';
 }
 
 if (mb_strlen($mensaje, 'UTF-8') < 10) {
@@ -88,21 +83,8 @@ if (!empty($errores)) {
 }
 
 // -----------------------------------------------------------------------
-// 5. MAPEO LEGIBLE DE SERVICIOS
+// 5. FORMATEO DE INFORMACIÓN
 // -----------------------------------------------------------------------
-$catalogoServicios = [
-    'sistemas'      => 'Centro de Desarrollo: Software y Sistemas Agénticos',
-    'hardware'      => 'Centro de Desarrollo: Prototipos de Hardware y Embebidos',
-    'impresion3d'   => 'UNEFABLAB: Impresión 3D y Manufactura Aditiva',
-    'centrocomputo' => 'Centro de Cómputo: Infraestructura y Asesoría Técnica',
-    'calidad'       => 'Control y Calidad: Auditoría Técnica y Certificación',
-    'capacitacion'  => 'Capacitación y Formación Especializada'
-];
-
-$nombreServicio = isset($catalogoServicios[$servicio]) 
-    ? $catalogoServicios[$servicio] 
-    : htmlspecialchars($servicio, ENT_QUOTES, 'UTF-8');
-
 $institucionTexto = !empty($institucion) 
     ? htmlspecialchars($institucion, ENT_QUOTES, 'UTF-8') 
     : '<span style="color: #8892b0; font-style: italic;">No especificada / Solicitud particular</span>';
@@ -263,11 +245,6 @@ $cuerpoHtml = <<<HTML
       <div class="field-card">
         <div class="field-label">Institución / Ente Solicitante</div>
         <div class="field-value">{$institucionTexto}</div>
-      </div>
-
-      <div class="field-card">
-        <div class="field-label">Unidad o Servicio Requerido</div>
-        <div class="field-value" style="color: #38bdf8; font-weight: 600;">{$nombreServicio}</div>
       </div>
 
       <div class="field-card">
