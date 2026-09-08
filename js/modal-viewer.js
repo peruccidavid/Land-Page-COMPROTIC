@@ -309,8 +309,8 @@ const ProjectViewer = {
       <div class="relative bg-[#0c121e] text-gray-200">
         <!-- Modal Cover Header -->
         <div class="p-6 sm:p-8 border-b border-[#232d3d] bg-[#111a2b] relative overflow-hidden">
-          <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
-            <div class="flex items-center gap-2">
+          <div class="flex flex-wrap items-center justify-between gap-4 mb-3 sm:mb-4">
+            <div class="hidden sm:flex items-center gap-2">
               <span class="px-3.5 py-1 rounded-full text-sm font-mono font-bold uppercase bg-[#0085bf]/20 text-[#38bdf8] border border-[#0085bf]/40">
                 ${article.categoryName}
               </span>
@@ -318,7 +318,7 @@ const ProjectViewer = {
                 ${article.badge}
               </span>
             </div>
-            <span class="text-sm font-mono text-[#38bdf8] font-medium">${article.date}</span>
+            <span class="text-sm font-mono text-[#38bdf8] font-medium ml-auto sm:ml-0">${article.date}</span>
           </div>
 
           <h1 class="text-2xl sm:text-3xl font-display font-bold text-white mb-3 tracking-tight leading-snug">
@@ -344,8 +344,8 @@ const ProjectViewer = {
           <div class="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 z-10 w-3.5 h-[1.5px] bg-[#38bdf8]/70"></div>
           <div class="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 z-10 w-3.5 h-[1.5px] bg-[#38bdf8]/70"></div>
 
-          <!-- Top-Left Glassmorphic HUD Badge -->
-          <div class="pointer-events-none absolute top-4 left-5 z-10 flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-[#070b12]/80 backdrop-blur-md border border-[#38bdf8]/40 shadow-lg">
+          <!-- Top-Left Glassmorphic HUD Badge (Oculto en Móvil) -->
+          <div class="pointer-events-none absolute top-4 left-5 z-10 hidden sm:flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-[#070b12]/80 backdrop-blur-md border border-[#38bdf8]/40 shadow-lg">
             <span class="w-2 h-2 rounded-full bg-[#38bdf8] animate-pulse"></span>
             <span class="text-sm font-mono text-[#38bdf8] font-bold tracking-wider">COMPROTIC // I+D+i REGISTRO VISUAL</span>
           </div>

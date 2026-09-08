@@ -141,30 +141,47 @@
        BANNER PROYECTO CUNAGUARO 6x6 (COMPACTO: TEXTO IZQ + VEHÍCULO DER)
   ================================ -->
   <section id="bannerCunaguaro"
-    class="group relative overflow-hidden border-b border-[#232d3d] bg-[#070b12] min-h-[150px] md:min-h-[175px] lg:min-h-[195px] flex items-center">
-    <!-- Fondo con efecto Parallax y Profundidad enfocado en el vehículo a la derecha -->
-    <div class="parallax-bg-wrapper absolute inset-0 -top-8 -bottom-8 overflow-hidden pointer-events-none">
+    class="group relative overflow-hidden border-b border-[#232d3d] bg-[#070b12] flex flex-col md:flex-row md:items-center min-h-0 md:min-h-[175px] lg:min-h-[195px]">
+    
+    <!-- Imagen Arriba en Pantallas Móviles (< md) -->
+    <div class="block md:hidden w-full h-52 sm:h-64 relative overflow-hidden border-b border-[#232d3d]/60">
+      <img src="images/proyecto-cunaguaro-banner.jpg"
+        alt="Vehículo Explorador Terrestre CUNAGUARO 6x6"
+        class="w-full h-full object-cover object-center scale-100"
+        loading="eager" />
+      <div class="absolute inset-0 bg-gradient-to-t from-[#070b12] via-[#070b12]/30 to-transparent pointer-events-none"></div>
+      <div class="absolute bottom-3 left-4 flex items-center gap-1.5 font-mono text-[11px] text-[#38bdf8] bg-[#070b12]/90 backdrop-blur-sm border border-[#0085bf]/40 rounded-lg px-2.5 py-1 shadow-md">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#38bdf8] opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-[#0085bf]"></span>
+        </span>
+        <span>UGV 6x6 CUNAGUARO</span>
+      </div>
+    </div>
+
+    <!-- Fondo con efecto Parallax enfocado en el vehículo a la derecha (Desktop md:) -->
+    <div class="hidden md:block parallax-bg-wrapper absolute inset-0 -top-8 -bottom-8 overflow-hidden pointer-events-none">
       <img id="parallaxCunaguaroImg" src="images/proyecto-cunaguaro-banner.jpg"
         alt="Vehículo Explorador Terrestre CUNAGUARO 6x6"
         class="w-full h-full object-cover object-right md:object-center scale-105 transition-transform duration-700 ease-out will-change-transform opacity-85 group-hover:opacity-100 group-hover:scale-110"
         loading="eager" />
     </div>
 
-    <!-- Gradientes de viñeta: oscuro y legible a la izquierda, translúcido a la derecha para ver el vehículo -->
+    <!-- Gradientes de viñeta: oscuro y legible a la izquierda, translúcido a la derecha para ver el vehículo (Desktop md:) -->
     <div
-      class="absolute inset-0 bg-gradient-to-r from-[#070b12] via-[#070b12]/90 via-45% md:via-50% to-transparent pointer-events-none">
+      class="hidden md:block absolute inset-0 bg-gradient-to-r from-[#070b12] via-[#070b12]/90 via-45% md:via-50% to-transparent pointer-events-none">
     </div>
     <div
-      class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#0085bf]/40 to-transparent pointer-events-none">
+      class="hidden md:block absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#0085bf]/40 to-transparent pointer-events-none">
     </div>
     <div
-      class="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#0085bf]/20 to-transparent pointer-events-none">
+      class="hidden md:block absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#0085bf]/20 to-transparent pointer-events-none">
     </div>
 
     <!-- Contenido: Tarjeta de Texto e Interacción en el Lado Izquierdo -->
-    <div class="relative max-w-7xl mx-auto px-6 py-4 w-full z-10">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-4 w-full z-10">
       <div
-        class="max-w-lg md:max-w-xl lg:max-w-2xl backdrop-blur-md bg-[#0c121e]/80 border border-[#0085bf]/35 rounded-xl p-4 md:p-5 shadow-[0_8px_30px_rgba(0,0,0,0.6)] group-hover:border-[#0085bf]/60 transition-all duration-300">
+        class="max-w-lg md:max-w-xl lg:max-w-2xl backdrop-blur-md bg-[#0c121e]/90 md:bg-[#0c121e]/80 border border-[#0085bf]/35 rounded-xl p-4 md:p-5 shadow-[0_8px_30px_rgba(0,0,0,0.6)] group-hover:border-[#0085bf]/60 transition-all duration-300">
 
         <div class="flex items-center gap-2 mb-2">
           <span
@@ -454,30 +471,49 @@
           <!-- UNIDAD A -->
           <article class="unit-card p-8 reveal">
             <div
-              class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#232d3d] pb-6 mb-6">
-              <div class="flex items-center gap-4">
+              class="flex items-center justify-between gap-3 sm:gap-4 border-b border-[#232d3d] pb-6 mb-6">
+              <div class="flex items-center gap-3.5 sm:gap-4 flex-1 min-w-0">
                 <div
-                  class="w-14 h-14 rounded-xl bg-[#0085bf]/15 border border-[#0085bf]/40 flex items-center justify-center text-[#38bdf8] shrink-0">
+                  class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-[#0085bf]/15 border border-[#0085bf]/40 flex items-center justify-center text-[#38bdf8] shrink-0">
                   <!-- SVG Icon: Software & Hardware Development -->
-                  <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <svg class="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                     <rect x="2" y="3" width="20" height="14" rx="2" stroke-linecap="round" />
                     <path d="M8 21h8m-4-4v4" stroke-linecap="round" />
                     <path d="M7 8l3 3-3 3m5 0h3" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </div>
-                <div>
-                  <span class="text-xs font-semibold text-[#38bdf8] tracking-wider uppercase">Unidad Estratégica
-                    01</span>
-                  <h3 class="font-display font-bold text-white text-xl md:text-2xl">Centro de Desarrollo de Tecnología
-                  </h3>
+                <div class="min-w-0">
+                  <span class="text-xs font-semibold text-[#38bdf8] tracking-wider uppercase block">Unidad Estratégica 01</span>
+                  <h3 class="font-display font-bold text-white text-lg sm:text-xl md:text-2xl leading-snug">Centro de Desarrollo de Tecnología</h3>
                 </div>
               </div>
-              <span class="self-start md:self-auto font-display font-bold text-3xl text-[#0085bf]/80">01</span>
+              <span class="font-display font-bold text-3xl sm:text-4xl text-[#0085bf]/80 shrink-0 text-right ml-2">01</span>
             </div>
 
-            <!-- Ilustración Vectorial SVG Institucional de Unidad A -->
+            <!-- Ilustración Vectorial en Móvil (Estilo Icono Sencillo y Tecnológico) -->
             <div
-              class="w-full h-44 bg-[#070b12] rounded-xl border border-[#232d3d] p-4 flex items-center justify-center mb-6 overflow-hidden relative">
+              class="flex md:hidden w-full h-32 bg-[#070b12] rounded-xl border border-[#232d3d] p-3 items-center justify-center mb-6 overflow-hidden relative shadow-inner">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,133,191,0.2),_transparent_70%)] pointer-events-none"></div>
+              <svg class="w-20 h-20 text-[#38bdf8]" viewBox="0 0 64 64" fill="none">
+                <rect x="14" y="14" width="36" height="36" rx="8" stroke="#38bdf8" stroke-width="2" fill="#0d1527" />
+                <rect x="22" y="22" width="20" height="20" rx="4" stroke="#0085bf" stroke-width="1.5" fill="#004c9e" fill-opacity="0.35" />
+                <path d="M28 29 L25 32 L28 35" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M36 29 L39 32 L36 35" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M33 27 L31 37" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" />
+                <path d="M22 14 V8 M32 14 V8 M42 14 V8" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" />
+                <path d="M22 56 V50 M32 56 V50 M42 56 V50" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" />
+                <path d="M14 22 H8 M14 32 H8 M14 42 H8" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" />
+                <path d="M56 22 H50 M56 32 H50 M56 42 H50" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" />
+                <circle cx="8" cy="32" r="2" fill="#38bdf8" />
+                <circle cx="56" cy="32" r="2" fill="#38bdf8" />
+                <circle cx="32" cy="8" r="2" fill="#38bdf8" />
+                <circle cx="32" cy="56" r="2" fill="#38bdf8" />
+              </svg>
+            </div>
+
+            <!-- Ilustración Vectorial SVG Institucional de Unidad A (Desktop md:) -->
+            <div
+              class="hidden md:flex w-full h-44 bg-[#070b12] rounded-xl border border-[#232d3d] p-4 items-center justify-center mb-6 overflow-hidden relative">
               <svg class="w-full h-full text-[#38bdf8]" viewBox="0 0 480 140" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <!-- Circuito y arquitectura de software -->
@@ -564,30 +600,47 @@
           <!-- UNIDAD B -->
           <article class="unit-card p-8 reveal">
             <div
-              class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#232d3d] pb-6 mb-6">
-              <div class="flex items-center gap-4">
+              class="flex items-center justify-between gap-3 sm:gap-4 border-b border-[#232d3d] pb-6 mb-6">
+              <div class="flex items-center gap-3.5 sm:gap-4 flex-1 min-w-0">
                 <div
-                  class="w-14 h-14 rounded-xl bg-[#004c9e]/20 border border-[#004c9e]/50 flex items-center justify-center text-[#38bdf8] shrink-0">
+                  class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-[#004c9e]/20 border border-[#004c9e]/50 flex items-center justify-center text-[#38bdf8] shrink-0">
                   <!-- SVG Icon: 3D Manufacturing / FabLab -->
-                  <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <svg class="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                     <path d="M12 3L2 8l10 5 10-5-10-5z" stroke-linecap="round" stroke-linejoin="round" />
                     <path d="M2 13l10 5 10-5" stroke-linecap="round" stroke-linejoin="round" />
                     <path d="M2 18l10 5 10-5" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </div>
-                <div>
-                  <span class="text-xs font-semibold text-[#38bdf8] tracking-wider uppercase">Unidad Estratégica
-                    02</span>
-                  <h3 class="font-display font-bold text-white text-xl md:text-2xl">Laboratorio de Manufactura
-                    (UNEFABLAB)</h3>
+                <div class="min-w-0">
+                  <span class="text-xs font-semibold text-[#38bdf8] tracking-wider uppercase block">Unidad Estratégica 02</span>
+                  <h3 class="font-display font-bold text-white text-lg sm:text-xl md:text-2xl leading-snug">Laboratorio de Manufactura (UNEFABLAB)</h3>
                 </div>
               </div>
-              <span class="self-start md:self-auto font-display font-bold text-3xl text-[#0085bf]/80">02</span>
+              <span class="font-display font-bold text-3xl sm:text-4xl text-[#0085bf]/80 shrink-0 text-right ml-2">02</span>
             </div>
 
-            <!-- Ilustración Vectorial SVG Institucional de Unidad B -->
+            <!-- Ilustración Vectorial en Móvil (Estilo Icono Sencillo y Tecnológico) -->
             <div
-              class="w-full h-44 bg-[#070b12] rounded-xl border border-[#232d3d] p-4 flex items-center justify-center mb-6 overflow-hidden relative">
+              class="flex md:hidden w-full h-32 bg-[#070b12] rounded-xl border border-[#232d3d] p-3 items-center justify-center mb-6 overflow-hidden relative shadow-inner">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,133,191,0.2),_transparent_70%)] pointer-events-none"></div>
+              <svg class="w-20 h-20 text-[#38bdf8]" viewBox="0 0 64 64" fill="none">
+                <path d="M26 8 H38 V14 L34 20 H30 L26 14 Z" fill="#004c9e" fill-opacity="0.4" stroke="#0085bf" stroke-width="1.5" />
+                <circle cx="32" cy="22" r="1.5" fill="#38bdf8" />
+                <line x1="32" y1="23" x2="32" y2="28" stroke="#38bdf8" stroke-width="2" stroke-dasharray="2 1" />
+                <path d="M32 28 L48 36 V50 L32 58 L16 50 V36 Z" stroke="#38bdf8" stroke-width="2" fill="#0d1527" stroke-linejoin="round" />
+                <path d="M32 28 V58" stroke="#0085bf" stroke-width="1.5" />
+                <path d="M32 43 L48 36" stroke="#0085bf" stroke-width="1.5" />
+                <path d="M32 43 L16 36" stroke="#0085bf" stroke-width="1.5" />
+                <polygon points="32,28 48,36 32,43 16,36" fill="#0085bf" fill-opacity="0.35" />
+                <circle cx="16" cy="36" r="2" fill="#38bdf8" />
+                <circle cx="48" cy="36" r="2" fill="#38bdf8" />
+                <circle cx="32" cy="58" r="2" fill="#38bdf8" />
+              </svg>
+            </div>
+
+            <!-- Ilustración Vectorial SVG Institucional de Unidad B (Desktop md:) -->
+            <div
+              class="hidden md:flex w-full h-44 bg-[#070b12] rounded-xl border border-[#232d3d] p-4 items-center justify-center mb-6 overflow-hidden relative">
               <svg class="w-full h-full text-[#38bdf8]" viewBox="0 0 480 140" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <!-- Estructura del cabezal 3D industrial -->
@@ -664,12 +717,12 @@
           <!-- UNIDAD C -->
           <article class="unit-card p-8 reveal">
             <div
-              class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#232d3d] pb-6 mb-6">
-              <div class="flex items-center gap-4">
+              class="flex items-center justify-between gap-3 sm:gap-4 border-b border-[#232d3d] pb-6 mb-6">
+              <div class="flex items-center gap-3.5 sm:gap-4 flex-1 min-w-0">
                 <div
-                  class="w-14 h-14 rounded-xl bg-[#0085bf]/15 border border-[#0085bf]/40 flex items-center justify-center text-[#38bdf8] shrink-0">
+                  class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-[#0085bf]/15 border border-[#0085bf]/40 flex items-center justify-center text-[#38bdf8] shrink-0">
                   <!-- SVG Icon: HPC Supercomputing -->
-                  <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <svg class="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                     <rect x="2" y="2" width="20" height="8" rx="2" stroke-linecap="round" />
                     <rect x="2" y="14" width="20" height="8" rx="2" stroke-linecap="round" />
                     <line x1="6" y1="6" x2="6.01" y2="6" stroke-linecap="round" />
@@ -678,18 +731,42 @@
                     <line x1="10" y1="18" x2="18" y2="18" stroke-linecap="round" />
                   </svg>
                 </div>
-                <div>
-                  <span class="text-xs font-semibold text-[#38bdf8] tracking-wider uppercase">Unidad Estratégica
-                    03</span>
-                  <h3 class="font-display font-bold text-white text-xl md:text-2xl">Centro de Cómputo</h3>
+                <div class="min-w-0">
+                  <span class="text-xs font-semibold text-[#38bdf8] tracking-wider uppercase block">Unidad Estratégica 03</span>
+                  <h3 class="font-display font-bold text-white text-lg sm:text-xl md:text-2xl leading-snug">Centro de Cómputo</h3>
                 </div>
               </div>
-              <span class="self-start md:self-auto font-display font-bold text-3xl text-[#0085bf]/80">03</span>
+              <span class="font-display font-bold text-3xl sm:text-4xl text-[#0085bf]/80 shrink-0 text-right ml-2">03</span>
             </div>
 
-            <!-- Ilustración Vectorial SVG Institucional de Unidad C -->
+            <!-- Ilustración Vectorial en Móvil (Estilo Icono Sencillo y Tecnológico) -->
             <div
-              class="w-full h-44 bg-[#070b12] rounded-xl border border-[#232d3d] p-4 flex items-center justify-center mb-6 overflow-hidden relative">
+              class="flex md:hidden w-full h-32 bg-[#070b12] rounded-xl border border-[#232d3d] p-3 items-center justify-center mb-6 overflow-hidden relative shadow-inner">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,133,191,0.2),_transparent_70%)] pointer-events-none"></div>
+              <svg class="w-20 h-20 text-[#38bdf8]" viewBox="0 0 64 64" fill="none">
+                <rect x="12" y="10" width="40" height="12" rx="3" stroke="#38bdf8" stroke-width="1.8" fill="#0d1527" />
+                <circle cx="18" cy="16" r="2" fill="#38bdf8" />
+                <circle cx="24" cy="16" r="1.5" fill="#0085bf" />
+                <line x1="32" y1="16" x2="46" y2="16" stroke="#0085bf" stroke-width="1.5" stroke-linecap="round" />
+
+                <rect x="12" y="26" width="40" height="12" rx="3" stroke="#38bdf8" stroke-width="1.8" fill="#0d1527" />
+                <circle cx="18" cy="32" r="2" fill="#38bdf8" />
+                <circle cx="24" cy="32" r="1.5" fill="#0085bf" />
+                <line x1="32" y1="32" x2="46" y2="32" stroke="#0085bf" stroke-width="1.5" stroke-linecap="round" />
+
+                <rect x="12" y="42" width="40" height="12" rx="3" stroke="#38bdf8" stroke-width="1.8" fill="#0d1527" />
+                <circle cx="18" cy="48" r="2" fill="#38bdf8" />
+                <circle cx="24" cy="48" r="1.5" fill="#0085bf" />
+                <line x1="32" y1="48" x2="46" y2="48" stroke="#0085bf" stroke-width="1.5" stroke-linecap="round" />
+
+                <path d="M52 16 H56 V48 H52" stroke="#0085bf" stroke-width="1.5" stroke-linejoin="round" />
+                <circle cx="56" cy="32" r="2.5" fill="#38bdf8" />
+              </svg>
+            </div>
+
+            <!-- Ilustración Vectorial SVG Institucional de Unidad C (Desktop md:) -->
+            <div
+              class="hidden md:flex w-full h-44 bg-[#070b12] rounded-xl border border-[#232d3d] p-4 items-center justify-center mb-6 overflow-hidden relative">
               <svg class="w-full h-full text-[#38bdf8]" viewBox="0 0 480 140" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <!-- Racks de servidores y centro de cómputo -->
@@ -788,30 +865,40 @@
           <!-- UNIDAD D -->
           <article class="unit-card p-8 reveal">
             <div
-              class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#232d3d] pb-6 mb-6">
-              <div class="flex items-center gap-4">
+              class="flex items-center justify-between gap-3 sm:gap-4 border-b border-[#232d3d] pb-6 mb-6">
+              <div class="flex items-center gap-3.5 sm:gap-4 flex-1 min-w-0">
                 <div
-                  class="w-14 h-14 rounded-xl bg-[#004c9e]/20 border border-[#004c9e]/50 flex items-center justify-center text-[#38bdf8] shrink-0">
+                  class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-[#004c9e]/20 border border-[#004c9e]/50 flex items-center justify-center text-[#38bdf8] shrink-0">
                   <!-- SVG Icon: Quality Assurance & Certification -->
-                  <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <svg class="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                     <path
                       d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.352 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                       stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </div>
-                <div>
-                  <span class="text-xs font-semibold text-[#38bdf8] tracking-wider uppercase">Unidad Estratégica
-                    04</span>
-                  <h3 class="font-display font-bold text-white text-xl md:text-2xl">Unidad de Control y Calidad de
-                    Producción</h3>
+                <div class="min-w-0">
+                  <span class="text-xs font-semibold text-[#38bdf8] tracking-wider uppercase block">Unidad Estratégica 04</span>
+                  <h3 class="font-display font-bold text-white text-lg sm:text-xl md:text-2xl leading-snug">Unidad de Control y Calidad de Producción</h3>
                 </div>
               </div>
-              <span class="self-start md:self-auto font-display font-bold text-3xl text-[#0085bf]/80">04</span>
+              <span class="font-display font-bold text-3xl sm:text-4xl text-[#0085bf]/80 shrink-0 text-right ml-2">04</span>
             </div>
 
-            <!-- Ilustración Vectorial SVG Institucional de Unidad D -->
+            <!-- Ilustración Vectorial en Móvil (Estilo Icono Sencillo y Tecnológico) -->
             <div
-              class="w-full h-44 bg-[#070b12] rounded-xl border border-[#232d3d] p-4 flex items-center justify-center mb-6 overflow-hidden relative">
+              class="flex md:hidden w-full h-32 bg-[#070b12] rounded-xl border border-[#232d3d] p-3 items-center justify-center mb-6 overflow-hidden relative shadow-inner">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,133,191,0.2),_transparent_70%)] pointer-events-none"></div>
+              <svg class="w-20 h-20 text-[#38bdf8]" viewBox="0 0 64 64" fill="none">
+                <path d="M32 8 L48 14 C48 30 42 46 32 54 C22 46 16 30 16 14 Z" stroke="#38bdf8" stroke-width="2" fill="#0d1527" stroke-linejoin="round" />
+                <circle cx="32" cy="30" r="12" stroke="#0085bf" stroke-width="1.5" fill="#004c9e" fill-opacity="0.35" />
+                <path d="M26 30 L30 34 L38 25" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="32" cy="47" r="2" fill="#38bdf8" />
+              </svg>
+            </div>
+
+            <!-- Ilustración Vectorial SVG Institucional de Unidad D (Desktop md:) -->
+            <div
+              class="hidden md:flex w-full h-44 bg-[#070b12] rounded-xl border border-[#232d3d] p-4 items-center justify-center mb-6 overflow-hidden relative">
               <svg class="w-full h-full text-[#38bdf8]" viewBox="0 0 480 140" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <!-- Proceso de Auditoría y Certificación -->
@@ -1298,7 +1385,7 @@
       <div class="max-w-7xl mx-auto px-6 relative z-10">
         <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <!-- Imagen del vehículo -->
-          <div class="reveal order-2 lg:order-1">
+          <div class="reveal order-1 lg:order-1">
             <a href="cunaguaro/index.html"
               class="group block relative rounded-2xl overflow-hidden border border-[#232d3d] hover:border-[#0085bf]/60 transition-all duration-500 shadow-2xl hover:shadow-[0_12px_35px_rgba(0,133,191,0.25)]">
               <img src="images/Gemini_Generated_Image_hp6fmjhp6fmjhp6f.jpg"
@@ -1321,7 +1408,7 @@
           </div>
 
           <!-- Texto y botón -->
-          <div class="reveal order-1 lg:order-2">
+          <div class="reveal order-2 lg:order-2">
             <p class="font-mono text-[#38bdf8] text-sm tracking-[0.3em] font-semibold mb-4 uppercase">// PROYECTO DE
               ROBÓTICA</p>
             <h2 class="font-display font-bold text-white text-3xl md:text-5xl mb-6">Vehículo Explorador <span
